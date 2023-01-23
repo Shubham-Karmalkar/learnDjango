@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubhams Project</title>
+</head>
+<body>
+    <!-- we use "include" in template to use existing template -->
+    {% include 'nav.html'%}
+    <!-- below line suggest whoevers lines are blocker that will show below -->
+    {% block content %}
+        replace me
+    <!-- what data blocker will be shown up to this point only -->
+    {% endblock %}
+</body>
+</html>

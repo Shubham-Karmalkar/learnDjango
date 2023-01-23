@@ -1,0 +1,9 @@
+<!-- below line tells to whom we are extending -->
+{% extends 'base.html' %}
+<!-- below line is notified to start line blocking -->
+{% block content %}
+<h1>Hello World</h1>
+{{request.user}}
+<!-- below line is notfier to end the line blocking -->
+{% endblock content %}
+

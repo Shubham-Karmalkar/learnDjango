@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Contact Page</h1>
+<p>
+    {{my_text}}, {{my_num}}
+</p>
+<ul>
+    {% for i in my_list %}
+        {% if i == 312 %}
+        <!-- "|" this is used for piping the conditions this is called "filter" and "tags" -->
+            <li>{{ forloop.counter }}-{{i|add:10}}</li>
+        {% else %}
+            <li>{{ forloop.counter }}-{{i}}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endblock content %}
+
