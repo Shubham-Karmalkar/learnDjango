@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>{{object.title}}</h1>
+<h3>{{object.description}}</h3>
+<form method="post"> {% csrf_token %}
+<!-- Below form.as_p is the method to convert form comming from context to html form -->
+{{form.as_p}}
+    <input type="submit" value="Save" />
+</form>
+{% endblock %}

@@ -18,7 +18,6 @@ this will give directory or folder name where manage.py or current project folde
 """
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -42,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'products',
     'pages',
+    'article',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -59,7 +60,12 @@ ROOT_URLCONF = 'tryDjango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['template'],
+        'DIRS': [
+            BASE_DIR / 'template',
+            BASE_DIR / 'products/template',
+            BASE_DIR / 'article/template',
+            BASE_DIR / 'blog/template',
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
